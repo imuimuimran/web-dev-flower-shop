@@ -153,6 +153,9 @@ h1{
     .text_heading{
         font-size: 1.5rem;
     }
+    .feature_heading p{
+        width: 100%;
+    }
     .img_left_container, .img_middle_container, .img_right_container{
         margin-top: 1.5rem;
     }
@@ -234,5 +237,40 @@ h1{
     }
     .deal_image img{
         margin-top: -2.625rem;
+    }
+}
+
+/* Instagram Style Part */
+.instagram_heading p{
+    padding-top: 1.5rem;
+    width: 40%;
+}
+.instagram_image{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 3rem;
+}
+
+/* Instagram Responsive Style */
+@media screen and (max-width: 768px) {
+    .instagram{
+        padding: 20px;
+    }
+    .instagram_image{
+        display: flex;
+        flex-direction: column;
+    }
+    .instagram_heading p{
+        width: 100%;
+    }
+    .img_1, .img_2, .img_3, .img_4{
+        width: 100%;
+    }
+    .img_1 img, .img_2 img, .img_3 img, .img_4 img{
+        width: 100%;
+    }
+    .img_1, .img_2, .img_3{
+        margin-bottom: 1rem;
     }
 }
