@@ -24,6 +24,9 @@ section{
     font-size: 1.125rem;
     line-height: 1.875rem;
 }
+.text_color{
+    color: #E55473;
+}
 
 /* Common Style */
 .text_center{
@@ -192,4 +195,44 @@ h1{
     }
 }
 
+/* Deal Style Part */
+.deal{
+    background-color: rgb(229, 84, 115, .1);
+    max-height: 620px;
+}
+.deal_inner{
+    max-width: 1100px;
+    display: flex;
+    gap: 11.625rem;
+}
+.deal_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.deal_text h2, .deal_text p, .deal_text button{
+    margin-top: 2rem;
+}
+.deal_image{
+    margin: 6.25rem auto;
+}
 
+/* Deal Responsive Style */
+@media screen and (max-width: 768px) {
+    .deal{
+        max-height: fit-content;
+    }
+    .deal_inner{
+        flex-direction: column-reverse;
+        padding: 1.25rem;
+        
+    }
+    .deal_text{
+        margin-top: -15rem;
+        padding-bottom: 5.375rem;
+    }
+    .deal_image img{
+        margin-top: -2.625rem;
+    }
+}
