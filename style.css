@@ -7,7 +7,7 @@ body{
 }
 section{
     max-width: 1440px;
-    margin: 3.5rem auto;
+    margin: 7rem auto;
 }
 
 /* Typography */
@@ -43,14 +43,12 @@ section{
 .banner{
     background-color: rgb(229, 84, 15, .1);
     max-height: 850px;
-    /* margin-bottom: 3.5rem; */
 }
 .banner_inner{
     max-width: 1440px;
     display: flex;
     align-items: center;
     gap: 6.06rem;
-    border: 1px solid green;
 }
 h1{
     font-size: 5rem;
@@ -69,9 +67,25 @@ h1{
     display: block;
 }
 
+/* Banner Responsive Style */
+@media screen and (max-width: 768px) {
+    .banner{
+        max-height: fit-content;
+        padding: 1.25rem;
+    }
+    .banner_inner{
+        flex-direction: column-reverse;
+    }
+    .banner_image img{
+        width: 100%;
+    }
+    h1{
+        font-size: 2rem;
+    }
+}
+
 /* Features Style Part */
 .features{
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
 }
@@ -115,13 +129,67 @@ h1{
     background-color: rgb(71, 125, 17, .115);
 }
 .img_left img, .img_middle img, .img_right img{
-    width: 70%;
-    height: 80%;
     position: absolute;
-    transform: translateY(6.75rem);
+    transform:translateY(6.75rem) scale(1);
 }
 .img_middle img{
-    transform: translateY(5.625rem);
+    transform: translateY(8rem);
+}
+.img_right img{
+    transform: translateY(4.2rem);
+}
+
+/* Features Responsive Style */
+@media screen and (max-width: 768px) {
+    .features{
+        padding: 1.25rem;
+    }
+    .feature_image{
+        flex-direction: column;
+    }
+    .text_heading{
+        font-size: 1.5rem;
+    }
+    .img_left_container, .img_middle_container, .img_right_container{
+        margin-top: 1.5rem;
+    }
+    .img_left_container p, .img_middle_container p, .img_right_container p{
+        font-size: 1.2rem;
+    }
+}
+
+/* Service Style Part */
+.service{
+    background-color: rgb(244, 244, 244);
+}
+.service_items{
+    display: flex;
+    padding-top: 5.375rem;
+    padding-bottom: 5.375rem;
+    
+}
+.service_item{
+    display: flex;
+    flex-direction: column;
+}
+.service_item p{
+    font-size: 1.5rem;
+    color: rgb(80, 80, 80);
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+/* Service Responsive Style */
+@media screen and (max-width: 768px) {
+    .service_items{
+        flex-direction: column;
+    }
+    .service_item:nth-child(2), .service_item:nth-child(3){
+        margin-top: 4rem;
+    }
+    .service_item p{
+    font-size: 1.2rem;
+    }
 }
 
 
